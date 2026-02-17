@@ -6,8 +6,8 @@
 using namespace std;
 
 int main() {
-    vector<int> arr = {10, 5, 2, 7, 1, 9};
-    int k = 15;
+    vector<int> arr = {9, -3, 3, -1, 6, -5};
+    int k = 9;
     int n = arr.size();
 
     map<int, int> sum;
