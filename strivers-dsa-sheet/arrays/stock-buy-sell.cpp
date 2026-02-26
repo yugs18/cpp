@@ -6,8 +6,18 @@ You are given an array of prices where prices[i] is the price of a given stock o
 using namespace std;
 
 int main() {
-    vector<int> arr = {7, 1, 5, 3, 6, 4};
+    vector<int> arr = {3, 8, 1, 5};
     int n = arr.size();
 
-    
+    int min = arr[0], max = 0;
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        int temp = arr[i] - min;
+        if (max < temp) max = temp;
+    }
+    cout << max << endl;
+
+    return 0;
 }
