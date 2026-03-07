@@ -17,6 +17,19 @@ int main() {
 
     while (low < high) {
         mid = low + ((high - low) / 2);
+        int cap = 1, sum = 0;
         
+        for (auto i : w) {
+            if (sum + i <= mid) {
+                sum += i;
+            } else {
+                cap++;
+                sum = i;
+            }
+        }
+        if (cap <= d) high = mid;
+        else low = mid + 1;
     }
+    cout << high << endl;
+    return 0;
 }
